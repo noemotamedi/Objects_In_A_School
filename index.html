@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>School</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="objects.js"></script>
+    <script src="data.js"></script>
+    <script src="actions.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body onload="putOutAlert()">
+<p id="title">School Thing</p>
+
+
+<table id="table">
+    <tr>
+        <td><input class="inTable" type="text" placeholder="first name" id="studentFirst"></td>
+        <td><input class="inTable" type="text" placeholder="last name" id="studentLast"></td>
+        <td><input class="inTable" type="number" placeholder="grade" id="grade"></td>
+        <td><button onClick="addStudent()" class="inTable" type="button">Add Student</button></td>
+    </tr>
+    <tr>
+        <td><input class="inTable" type="text" placeholder="first name" id="teacherFirst"></td>
+        <td><input class="inTable" type="text" placeholder="last name" id="teacherLast"></td>
+        <td><input class="inTable" type="text" placeholder="subject" id="subject"></td>
+        <td><button onClick="addTeacher()" class="inTable" type="button">Add Teacher</button></td>
+    </tr>
+    <tr>
+        <td><input class="inTable" type="text" placeholder="section name" id="sectionName"></td>
+        <td><input class="inTable" type="number" placeholder="section count" id="sectionCount"></td>
+        <td></td>
+        <td><button onClick="addSection()" class="inTable" type="button">Add Section</button></td>
+    </tr>
+</table>
+
+
+
+
+<table id="list">
+    <tr>
+        <td>
+            <select id="selectList">
+                <option value="Students">Students</option>
+                <option value="Teachers">Teachers</option>
+                <option value="Sections">Sections</option>
+            </select>
+        </td>
+        <td><button id="confirmList" onClick="list(document.getElementById('selectList').value)">Confirm!</button></td>
+    </tr>
+</table>
+
+<table id="changePerson">
+    <tr>
+        <th id="changePersonHeading"></th>
+    </tr>
+    <tr id="row1">
+        <td id='row1column1'></td>
+        <td><input id='row1column2' type="text"></input></td>
+    </tr>
+
+    <tr id="row2">
+        <td id='row2column1'></td>
+        <td><input id='row2column2' type="text"></input></td>
+    </tr>
+
+    <tr id="row3">
+        <td id='row3column1'></td>
+        <td><div id='row3column2'></div></td>
+    </tr>
+    <tr id="row4">
+        <td id='row4column1'></td>
+        <td><div id='row4column2'></div></td>
+    </tr>
+    <tr>
+        <td id="confirmButtonTd"></td>
+    </tr>
+</table>
+<!--
+<iframe id="carlosMantos" width="560" height="315" src="https://www.youtube.com/embed/QKO6IChjojI?autoplay=1&start=213&end=224"  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+-->
+<div id="carlos2"></div>
+
+
+<table id="listThingsInSections">
+    <tr>
+        <td>
+            <select id="selectStudentOrTeacher">
+                <option value="students">Students</option>
+                <option value="teachers">Teachers</option>
+            </select>
+        </td>
+        <td id="whichSection">
+            <select id="whichSection2"></select>
+        </td>
+            <td><button id="confirmListPeopleInSection" onClick="ListTheThingsInSection(document.getElementById('selectStudentOrTeacher').value)">Confirm!</button></td>
+    </tr>
+</table>
+
+<table id="PeopleInTheSection"></table>
+
+
+</body>
+</html>
+
